@@ -9,11 +9,11 @@
    <meta name="description" content="" />
 
    <!-- Site Title -->
-   <title>Gerold - Personal Portfolio HTML5 Template</title>
+   <title>{% block title %}Portfolio{% endblock %}</title>
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="apple-touch-icon" href="./portfolio_app/assets/img/favicon.png" />
-   <link rel="shortcut icon" type="image/png" href="./portfolio_app/assets/img/favicon.png" />
+   <link rel="apple-touch-icon" href="{% static 'portfolio_app/assets/img/logo/logo-2.png' %}" />
+   <link rel="shortcut icon" type="image/png" href="{% static 'portfolio_app/assets/img/logo/logo-2.png' %}" />
 
    <!-- CSS here -->
    <link rel="stylesheet" href="{% static 'portfolio_app/assets/css/animate.min.css' %}">

@@ -2,7 +2,9 @@
 {% extends 'portfolio_app/base.html' %}
 
 {% load static %}
-  
+
+{% block title %}About Page{% endblock %}
+
 {% block content %}
        <!-- START: Breadcrumb Area -->
        <section class="breadcrumb_area" data-bg-image="./portfolio_app/assets/img/breadcrumb/breadcrumb-bg.jpg" data-bg-color="#140C1C">
@@ -24,231 +26,109 @@
        <!-- END: Breadcrumb Area -->
  
        <!-- start: Works Area -->
-       <section class="works-section style-2" id="resume-section">
-          <div class="container">
-             <div class="row">
-                <div class="col-md-12">
-                   <div class="section-header text-center">
-                      <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Resume</h2>
-                   </div>
+      <section class="works-section style-2" id="resume-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Resume</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="works-wrapper">
+
+          <!-- Education Section -->
+          <div class="works-content-item">
+            <h3 class="title wow fadeInLeft" data-wow-delay=".3s">Education</h3>
+            <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
+
+              <div class="works-item">
+                <div class="works-icon">
+                  <i class="flaticon-graduation-cap"></i>
                 </div>
-             </div>
-             <div class="row">
-                <div class="col-12">
-                   <div class="works-wrapper">
-                      <div class="works-content-item">
-                         <h3 class="title wow fadeInLeft" data-wow-delay=".3s">Education</h3>
-                         <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-graduation-cap"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Programming course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-graduation-cap"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Graphics Design Course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-graduation-cap"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Graphics Design Course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-graduation-cap"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Graphics Design Course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                      <div class="works-content-item">
-                         <h3 class="title wow fadeInRight" data-wow-delay=".3s">Work Experience</h3>
-                         <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-suitcase"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Programming course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-suitcase"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Graphics Design Course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-suitcase"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Graphics Design Course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                            <div class="works-item">
-                               <div class="works-icon">
-                                  <i class="flaticon-suitcase"></i>
-                               </div>
-                               <div class="works-content">
-                                  <span class="number">2023 - 2024</span>
-                                  <h5 class="title">Graphics Design Course</h5>
-                                  <span class="sub-title">Harverd University</span>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
+                <div class="works-content">
+                  <span class="number">2019 - 2023</span>
+                  <h5 class="title">B.E. in Electronics and Communication</h5>
+                  <span class="sub-title">Saveetha School of Engineering, Chennai<br>CGPA: 7.7 / 10</span>
                 </div>
-             </div>
+              </div>
+
+              <div class="works-item">
+                <div class="works-icon">
+                  <i class="flaticon-graduation-cap"></i>
+                </div>
+                <div class="works-content">
+                  <span class="number">2018 - 2019</span>
+                  <h5 class="title">12th Grade</h5>
+                  <span class="sub-title">MEASI Matric Hr. Sec. School, Chennai<br>Percentage: 53%</span>
+                </div>
+              </div>
+
+              <div class="works-item">
+                <div class="works-icon">
+                  <i class="flaticon-graduation-cap"></i>
+                </div>
+                <div class="works-content">
+                  <span class="number">2016 - 2017</span>
+                  <h5 class="title">10th Grade</h5>
+                  <span class="sub-title">Seethakathi Matric Hr. Sec. School<br>Percentage: 79.6%</span>
+                </div>
+              </div>
+
+            </div>
           </div>
-       </section>
+
+          <!-- Work Experience Section -->
+          <div class="works-content-item">
+            <h3 class="title wow fadeInRight" data-wow-delay=".3s">Work Experience</h3>
+            <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
+
+              <div class="works-item">
+                <div class="works-icon">
+                  <i class="flaticon-suitcase"></i>
+                </div>
+                <div class="works-content">
+                  <span class="number">March 2024 – Present</span>
+                  <h5 class="title">Python Developer</h5>
+                  <span class="sub-title">Thaagam Foundation, Chennai</span>
+                </div>
+              </div>
+
+              <div class="works-item">
+                <div class="works-icon">
+                  <i class="flaticon-suitcase"></i>
+                </div>
+                <div class="works-content">
+                  <span class="number">July 2023 – Jan 2024</span>
+                  <h5 class="title">Python Developer Intern</h5>
+                  <span class="sub-title">UNIQ Technologies</span>
+                </div>
+              </div>
+
+              <div class="works-item">
+                <div class="works-icon">
+                  <i class="flaticon-suitcase"></i>
+                </div>
+                <div class="works-content">
+                  <span class="number">Sep 2022 – Mar 2023</span>
+                  <h5 class="title">Python Training</h5>
+                  <span class="sub-title">Cyber Soft Solution, Chennai</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
        <!-- end: Works Area -->
- 
-       <!-- start: Skills Area -->
-       <section class="skills-section style-3" id="skills-section">
-          <div class="container">
-             <div class="row">
-                <div class="col-md-12">
-                   <div class="section-header text-center">
-                      <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Skills</h2>
-                      <p class="text-uppercase wow fadeInUp" data-wow-delay=".4s">
-                         Offerd Services
-                      </p>
-                   </div>
-                </div>
-             </div>
-             <div class="row">
-                <div class="col-md-12">
-                   <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-                      <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
-                         <div class="skill-inner">
-                            <div class="icon-box">
-                               <img src="{% static 'portfolio_app/assets/img/icons/figma.svg' %}" alt="">
-                            </div>
-                            <div class="number">92%</div>
-                         </div>
-                         <p>Figma</p>
-                      </div>
-                      <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
-                         <div class="skill-inner">
-                            <div class="icon-box">
-                               <img src="{% static 'portfolio_app/assets/img/icons/sketch.svg' %}" alt="">
-                            </div>
-                            <div class="number">80%</div>
-                         </div>
-                         <p>Sketch</p>
-                      </div>
-                      <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
-                         <div class="skill-inner">
-                            <div class="icon-box">
-                               <img src="{% static 'portfolio_app/assets/img/icons/xd.svg' %}" alt="">
-                            </div>
-                            <div class="number">85%</div>
-                         </div>
-                         <p>XD</p>
-                      </div>
-                      <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
-                         <div class="skill-inner">
-                            <div class="icon-box">
-                               <img src="{% static 'portfolio_app/assets/img/icons/wp.svg' %}" alt="">
-                            </div>
-                            <div class="number">99%</div>
-                         </div>
-                         <p>WordPess</p>
-                      </div>
-                      <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
-                         <div class="skill-inner">
-                            <div class="icon-box">
-                               <img src="{% static 'portfolio_app/assets/img/icons/react.svg' %}" alt="">
-                            </div>
-                            <div class="number">89%</div>
-                         </div>
-                         <p>React</p>
-                      </div>
-                      <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
-                         <div class="skill-inner">
-                            <div class="icon-box">
-                               <img src="{% static 'portfolio_app/assets/img/icons/js.svg' %}" alt="">
-                            </div>
-                            <div class="number">93%</div>
-                         </div>
-                         <p>JavaScript</p>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </section>
-       <!-- end: Skills Area -->
- 
-       <!-- start: Counter Area -->
-       <section class="counter-section">
-          <div class="container">
-             <div class="row">
-                <div class="col-12">
-                   <div class="funfact-area">
-                      <div class="row">
-                         <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".3s">
-                               <div class="number"><span class="odometer" data-count="14">0</span></div>
-                               <div class="text">Years of <br>Experience</div>
-                            </div>
-                         </div>
-                         <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".4s">
-                               <div class="number"><span class="odometer" data-count="50">0</span>+</div>
-                               <div class="text">Project <br>Completed</div>
-                            </div>
-                         </div>
-                         <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".5s">
-                               <div class="number"><span class="odometer" data-count="1.5">0</span>K</div>
-                               <div class="text">Happy <br>Clients</div>
-                            </div>
-                         </div>
-                         <div class="col-6 col-lg-3">
-                            <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp" data-wow-delay=".6s">
-                               <div class="number"><span class="odometer" data-count="14">0</span></div>
-                               <div class="text">Years of <br>Experience</div>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </section>
-       <!-- end: Counter Area -->
- 
+
        <!-- start: Text Area -->
        <section class="text-section">
           <div class="container">
@@ -260,7 +140,7 @@
                          <h2 id="anim" class="section-title wow fadeInUp" data-wow-delay=".4s">Let’s have a chat</h2>
                       </div>
                       <div class="chat-mail wow fadeInRight" data-wow-delay=".5s">
-                         <a class="link" href="mailto:info@taylor.com">info@taylor.com <i class="fa-light fa-arrow-right"></i></a>
+                         <a class="link" href="mailto:ahamedmansoor169@gmail.com">ahamedmansoor169@gmail.com<i class="fa-light fa-arrow-right"></i></a>
                       </div>
                    </div>
                 </div>

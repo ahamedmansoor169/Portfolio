@@ -1,6 +1,235 @@
 {% extends "portfolio_app/base.html" %}
 {% load static %}
+{% block title %}Contact Page{% endblock %}
 {% block content %}
+
+      <style>
+         .success-modal-content {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            overflow: hidden;
+            position: relative;
+         }
+
+         .success-modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            pointer-events: none;
+         }
+
+         .success-close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 0;
+         }
+
+         .success-close-btn i {
+            font-size: 16px;
+            color: white;
+         }
+
+         .success-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+         }
+
+         .success-close-btn:hover i {
+            color: white;
+         }
+
+         .success-icon-wrapper {
+            position: relative;
+            display: inline-block;
+         }
+
+         .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: successIconPulse 2s infinite;
+         }
+
+         .success-icon i {
+            font-size: 2.5rem;
+            color: #00ff88;
+            animation: checkmarkAnimation 0.6s ease-in-out;
+         }
+
+         .success-title {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+         }
+
+         .success-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 400px;
+            margin: 0 auto;
+         }
+
+         .success-btn {
+            background: linear-gradient(45deg, #00ff88, #00cc6a);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 40px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+         }
+
+         .success-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 255, 136, 0.4);
+            background: linear-gradient(45deg, #00cc6a, #00ff88);
+         }
+
+         .success-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+         }
+
+         .success-btn:hover::before {
+            left: 100%;
+         }
+
+         .success-confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+         }
+
+         .success-confetti::before,
+         .success-confetti::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            animation: confettiFall 3s linear infinite;
+         }
+
+         .success-confetti::before {
+            left: 20%;
+            animation-delay: 0s;
+            background: #00ff88;
+         }
+
+         .success-confetti::after {
+            right: 20%;
+            animation-delay: 1s;
+            background: #ff6b6b;
+         }
+
+         @keyframes successIconPulse {
+            0%, 100% {
+               transform: scale(1);
+            }
+            50% {
+               transform: scale(1.05);
+            }
+         }
+
+         @keyframes checkmarkAnimation {
+            0% {
+               transform: scale(0);
+               opacity: 0;
+            }
+            50% {
+               transform: scale(1.2);
+            }
+            100% {
+               transform: scale(1);
+               opacity: 1;
+            }
+         }
+
+         @keyframes confettiFall {
+            0% {
+               transform: translateY(-100vh) rotate(0deg);
+               opacity: 1;
+            }
+            100% {
+               transform: translateY(100vh) rotate(360deg);
+               opacity: 0;
+            }
+         }
+
+         .modal.fade .modal-dialog {
+            transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+            transform: scale(0.8) translateY(-20px);
+         }
+
+         .modal.show .modal-dialog {
+            transform: scale(1) translateY(0);
+         }
+
+         @media (max-width: 576px) {
+            .success-modal-content {
+               margin: 20px;
+               border-radius: 15px;
+            }
+            
+            .success-title {
+               font-size: 1.5rem;
+            }
+            
+            .success-message {
+               font-size: 1rem;
+            }
+            
+            .success-icon {
+               width: 60px;
+               height: 60px;
+            }
+            
+            .success-icon i {
+               font-size: 2rem;
+            }
+         }
+      </style>
+      
       <!-- START: Breadcrumb Area -->
       <section class="breadcrumb_area" data-bg-image="./portfolio_app/assets/img/breadcrumb/breadcrumb-bg.jpg" data-bg-color="#140C1C">
          <div class="container">
@@ -27,46 +256,55 @@
                <div class="col-lg-6 col-md-7 order-2 order-md-1">
                   <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
                      <div class="section-header">
-                        <h2 class="section-title">Let’s work together!</h2>
+                        <h2 class="section-title">Let's work together!</h2>
                         <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
                      </div>
                      <div class="tj-contact-form">
-                        <form id="contact-form">
+                        <form id="contactForm" action="{% url 'contact' %}" method="post" >
+                           {% csrf_token %}
                            <div class="row gx-3">
+                              <div class="col-12">
+                                 <div class="form_group">
+                                    <input type="text" name="name" id="conName" placeholder="Enter Your Name" autocomplete="off" 
+                                           pattern="[A-Za-z\s]{2,50}" 
+                                           title="Name should contain only letters and spaces, 2-50 characters" 
+                                           minlength="2" 
+                                           maxlength="50" 
+                                           required>
+                                 </div>
+                              </div>                              
                               <div class="col-sm-6">
                                  <div class="form_group">
-                                    <input type="text" name="conName" id="conName" placeholder="First name" autocomplete="off">
+                                    <input type="email" name="conEmail" id="conEmail" placeholder="Email address" autocomplete="off" required>
                                  </div>
                               </div>
                               <div class="col-sm-6">
                                  <div class="form_group">
-                                    <input type="text" name="conLName" id="conLName" placeholder="Last name" autocomplete="off">
-                                 </div>
-                              </div>
-                              <div class="col-sm-6">
-                                 <div class="form_group">
-                                    <input type="email" name="conEmail" id="conEmail" placeholder="Email address" autocomplete="off">
-                                 </div>
-                              </div>
-                              <div class="col-sm-6">
-                                 <div class="form_group">
-                                    <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number" autocomplete="off">
+                                    <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number" autocomplete="off" 
+                                           pattern="[0-9]{10}" 
+                                           title="Please enter a valid 10-digit phone number" 
+                                           minlength="10" 
+                                           maxlength="10" 
+                                           required>
                                  </div>
                               </div>
                               <div class="col-12">
                                  <div class="form_group">
-                                    <select name="conService" id="conService" class="tj-nice-select">
+                                    <select name="conService" id="conService" class="tj-nice-select" required>
                                        <option value="" selected="" disabled="">Choose Service</option>
-                                       <option value="braning">Branding Design</option>
-                                       <option value="web">Web Design</option>
-                                       <option value="uxui">UI/UX Design</option>
-                                       <option value="app">App Design</option>
+                                       <option value="website">Website Development</option>
+                                       <option value="app">App Development</option>
+                                       <option value="frontend">Frontend Development</option>                                       
                                     </select>
                                  </div>
                               </div>
                               <div class="col-12">
                                  <div class="form_group">
-                                    <textarea name="conMessage" id="conMessage" placeholder="Message"></textarea>
+                                    <textarea name="conMessage" id="conMessage" placeholder="Message" 
+                                              minlength="10" 
+                                              maxlength="500" 
+                                              rows="5" 
+                                              required></textarea>
                                  </div>
                               </div>
                               <div class="col-12">
@@ -116,4 +354,114 @@
          </div>
       </section>
       <!-- end: Contact Area -->
+
+      <!-- Success Modal -->
+      <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal-content">
+               <div class="modal-header border-0 position-relative">
+                  <button type="button" class="btn-close success-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                     <i class="fas fa-times"></i>
+                  </button>
+               </div>
+               <div class="modal-body text-center py-5">
+                  <div class="success-icon-wrapper mb-4">
+                     <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                     </div>
+                  </div>
+                  <h2 class="success-title mb-3">Message Sent Successfully!</h2>
+                  <p class="success-message mb-4">Thank you for reaching out to me. I've received your message and will get back to you within 24 hours.</p>
+                  <div class="success-animation">
+                     <div class="success-confetti"></div>
+                  </div>
+               </div>
+               <div class="modal-footer border-0 justify-content-center pb-4">
+                  <button type="button" class="btn success-btn" data-bs-dismiss="modal">
+                     <span>Awesome!</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         // Check if there's a success message from Django
+         {% if messages %}
+            {% for message in messages %}
+               {% if message.tags == 'success' %}
+                  document.addEventListener('DOMContentLoaded', function() {
+                     var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                     successModal.show();
+                  });
+               {% endif %}
+            {% endfor %}
+         {% endif %}
+
+         // Real-time validation feedback
+         document.addEventListener('DOMContentLoaded', function() {
+            // Name validation
+            const nameInput = document.getElementById('conName');
+            nameInput.addEventListener('input', function() {
+               // Remove any numbers or special characters, keep only letters and spaces
+               this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+               
+               const value = this.value;
+               const pattern = /^[A-Za-z\s]{2,50}$/;
+               
+               if (value && !pattern.test(value)) {
+                  this.setCustomValidity('Name should contain only letters and spaces (2-50 characters)');
+               } else {
+                  this.setCustomValidity('');
+               }
+            });
+
+            // Prevent numbers and special characters from being typed in name field
+            nameInput.addEventListener('keypress', function(e) {
+               const char = String.fromCharCode(e.which);
+               if (!/[A-Za-z\s]/.test(char)) {
+                  e.preventDefault();
+               }
+            });
+
+            // Phone validation
+            const phoneInput = document.getElementById('conPhone');
+            phoneInput.addEventListener('input', function() {
+               // Remove any non-digit characters
+               this.value = this.value.replace(/[^0-9]/g, '');
+               
+               const value = this.value;
+               if (value && value.length !== 10) {
+                  this.setCustomValidity('Please enter exactly 10 digits');
+               } else {
+                  this.setCustomValidity('');
+               }
+            });
+
+            // Message character counter
+            const messageTextarea = document.getElementById('conMessage');
+            const messageGroup = messageTextarea.closest('.form_group');
+            
+            // Create character counter
+            const charCounter = document.createElement('small');
+            charCounter.className = 'char-counter';
+            charCounter.style.cssText = 'color: #666; font-size: 12px; float: right; margin-top: 5px;';
+            messageGroup.appendChild(charCounter);
+            
+            messageTextarea.addEventListener('input', function() {
+               const currentLength = this.value.length;
+               const maxLength = 500;
+               charCounter.textContent = `${currentLength}/${maxLength} characters`;
+               
+               if (currentLength > maxLength * 0.9) {
+                  charCounter.style.color = '#ff6b6b';
+               } else {
+                  charCounter.style.color = '#666';
+               }
+            });
+            
+            // Initialize counter
+            messageTextarea.dispatchEvent(new Event('input'));
+         });
+      </script>
 {% endblock %}

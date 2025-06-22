@@ -1,37 +1,44 @@
+{% extends 'portfolio_app/base.html' %}
 
+{% load static %}
 
- {% extends 'portfolio_app/base.html' %}
-
- {% load static %}
-   
+{% block title %}Home Page{% endblock %}
 {% block content %}
 <style>
    .typewriter-text {
-     display: inline;
+      display: inline;
    }
-   
+
    .cursor {
-     display: inline-block;
-     margin-left: 1px;
-     width: 2px;
-     animation: blink 1s infinite;
+      display: inline-block;
+      margin-left: 1px;
+      width: 2px;
+      animation: blink 1s infinite;
    }
-   
+
    @keyframes blink {
-     0% { opacity: 1; }
-     50% { opacity: 0; }
-     100% { opacity: 1; }
+      0% {
+         opacity: 1;
+      }
+
+      50% {
+         opacity: 0;
+      }
+
+      100% {
+         opacity: 1;
+      }
    }
-   
+
    @media (max-width: 767px) {
-     .hero-title {
-       font-size: 2.5rem;
-       line-height: 1.2;
-     }
+      .hero-title {
+         font-size: 2.5rem;
+         line-height: 1.2;
+      }
    }
 
    .portfolio-section {
-    padding-top: 60px;
+      padding-top: 60px;
    }
 </style>
 <!-- HERO SECTION START -->
@@ -47,24 +54,33 @@
             <div class="hero-content-box">
                <span class="hero-sub-title">I'm Ahamed Mansoor</span>
                <h1 class="hero-title">
-                  <span id="typewriter-prefix"></span><span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                  <span id="typewriter-prefix"></span><span id="typewriter" class="typewriter-text"></span><span
+                     class="cursor">|</span>
                </h1>
-      
+
                <div class="hero-image-box d-md-none text-center">
-                  <img src="{% static 'portfolio_app/assets/img/hero/me.png' %}" alt="" />
+                  <img src="{% static 'portfolio_app/assets/img/hero/me-1.png' %}" alt="" />
                </div>
-      
+
                <p class="lead">
-                  I build powerful web applications with Django, MySQL, and JavaScript, creating secure and responsive solutions with real-time functionality
+                  I build powerful web applications with Django, MySQL, and JavaScript, creating secure and responsive
+                  solutions with real-time functionality
                </p>
                <div class="button-box d-flex flex-wrap align-items-center">
-                  <a href="#" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
+                  <a href="{% static 'portfolio_app/assets/files/Ahamed_Mansoor_CV.pdf' %}" 
+                     class="btn tj-btn-secondary" 
+                     download 
+                     target="_blank">
+                     Download CV <i class="flaticon-download"></i>
+                  </a>
+
                   <ul class="ul-reset social-icons">
                      <li>
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                     </li>                          
+                     </li>
                      <li>
-                        <a href="https://www.linkedin.com/in/ahamed-mansoor"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/ahamed-mansoor"><i
+                              class="fa-brands fa-linkedin-in"></i></a>
                      </li>
                      <li>
                         <a href="https://github.com/ahamedmansoor98"><i class="fa-brands fa-github"></i></a>
@@ -75,60 +91,57 @@
          </div>
          <div class="col-md-6 d-none d-md-block">
             <div class="hero-image-box text-center">
-               <img src="{% static 'portfolio_app/assets/img/hero/me.png' %}" alt="" />
+               <img src="{% static 'portfolio_app/assets/img/hero/me-1.png' %}" alt="" />
             </div>
          </div>
       </div>
       <div class="funfact-area">
-<div class="row">
-<div class="col-6 col-lg-3">
-<div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-   <div class="number"><span class="odometer" data-count="1">0</span>+</div>
-   <div class="text">Years of <br />Experience</div>
-</div>
-</div>
-<div class="col-6 col-lg-3">
-<div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-   <div class="number"><span class="odometer" data-count="8">0</span>+</div>
-   <div class="text">Projects <br />Completed</div>
-</div>
-</div>
-<div class="col-6 col-lg-3">
-<div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-   <div class="number"><span class="odometer" data-count="100">0</span>%</div>
-   <div class="text">Client <br />Satisfaction</div>
-</div>
-</div>
-<div class="col-6 col-lg-3">
-<div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-   <div class="number"><span class="odometer" data-count="500">0</span>+</div>
-   <div class="text">Hours of <br />Coding</div>
-</div>
-</div>
-</div>
-</div>
+         <div class="row">
+            <div class="col-6 col-lg-3">
+               <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                  <div class="number"><span class="odometer" data-count="1">0</span>+</div>
+                  <div class="text">Years of <br />Experience</div>
+               </div>
+            </div>
+            <div class="col-6 col-lg-3">
+               <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                  <div class="number"><span class="odometer" data-count="8">0</span>+</div>
+                  <div class="text">Projects <br />Completed</div>
+               </div>
+            </div>
+            <div class="col-6 col-lg-3">
+               <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                  <div class="number"><span class="odometer" data-count="100">0</span>%</div>
+                  <div class="text">Client <br />Satisfaction</div>
+               </div>
+            </div>
+            <div class="col-6 col-lg-3">
+               <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
+                  <div class="number"><span class="odometer" data-count="900">0</span>+</div>
+                  <div class="text">Hours of <br />Coding</div>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
 </section>
 <!-- HERO SECTION END -->
 
 <!-- SKILLS SECTION START -->
-   <section class="skills-section" id="skills-section">
+<section class="skills-section" id="skills-section">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
             <div class="section-header text-center">
                <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Skills</h2>
-               <!-- <p class="wow fadeInUp" data-wow-delay=".4s">
-                  We put your ideas and thus your wishes in the form of a unique web project that inspires you and
-                  you customers.
-               </p> -->
             </div>
          </div>
       </div>
       <div class="row">
          <div class="col-md-12">
-            <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
-               <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
+            <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center" style="gap: 8px;">
+               <div class="skill-item wow fadeInUp" data-wow-delay=".3s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
                         <img src="{% static 'portfolio_app/assets/img/icons/skills-1.svg' %}" alt="" />
@@ -137,7 +150,8 @@
                   </div>
                   <p>HTML</p>
                </div>
-               <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
+               <div class="skill-item wow fadeInUp" data-wow-delay=".4s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
                         <img src="{% static 'portfolio_app/assets/img/icons/skills-2.svg' %}" alt="" />
@@ -146,7 +160,8 @@
                   </div>
                   <p>CSS3</p>
                </div>
-               <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
+               <div class="skill-item wow fadeInUp" data-wow-delay=".5s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
                         <img src="{% static 'portfolio_app/assets/img/icons/skills-3.svg' %}" alt="" />
@@ -154,8 +169,9 @@
                      <div class="number">70%</div>
                   </div>
                   <p>Javascript</p>
-               </div>                     
-               <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
+               </div>
+               <div class="skill-item wow fadeInUp" data-wow-delay=".6s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
                         <img src="{% static 'portfolio_app/assets/img/icons/python.svg' %}" alt="" />
@@ -163,17 +179,19 @@
                      <div class="number">80%</div>
                   </div>
                   <p>Python</p>
-               </div>                     
-               <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
+               </div>
+               <div class="skill-item wow fadeInUp" data-wow-delay=".7s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
                         <img src="{% static 'portfolio_app/assets/img/icons/django.svg' %}" alt="" />
                      </div>
-                     <div class="number">80%</div>
+                     <div class="number">90%</div>
                   </div>
                   <p>Django</p>
                </div>
-               <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
+               <div class="skill-item wow fadeInUp" data-wow-delay=".8s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
                         <img src="{% static 'portfolio_app/assets/img/icons/mysql-1.svg' %}" alt="" />
@@ -182,15 +200,17 @@
                   </div>
                   <p>MySQL</p>
                </div>
-               <!-- <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
+               <div class="skill-item wow fadeInUp" data-wow-delay=".9s"
+                  style="flex: 1 1 calc(14.28% - 8px); min-width: 100px; max-width: 150px;">
                   <div class="skill-inner">
                      <div class="icon-box">
-                        <img src="{% static 'portfolio_app/assets/img/icons/restapi-1.svg' %}" alt="" />
+                        <img style="width: 60px; height: 60px; border-radius: 5px;"
+                           src="{% static 'portfolio_app/assets/img/icons/restapi-1.svg' %}" alt="" />
                      </div>
                      <div class="number">82%</div>
                   </div>
-                  <p>RestAPi</p>
-               </div> -->
+                  <p>RestAPI</p>
+               </div>
             </div>
          </div>
       </div>
@@ -205,46 +225,51 @@
          <div class="col-md-12">
             <div class="section-header text-center">
                <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Recent Works</h2>
-         </div>
-      </div>
-
-      <div class="row">
-         <div class="col-md-12">            
-            <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
-               <div class="portfolio-sizer"></div>
-               <div class="gutter-sizer"></div>
-               <div class="portfolio-item branding">
-                  <div class="image-box">
-                     <img src="{% static 'portfolio_app/assets/img/portfolio/2.jpg' %}" alt="" />
-                  </div>
-                  <div class="content-box">
-                     <h3 class="portfolio-title">Deloitte</h3>
-                     <p>Project was about precision and information.</p>
-                     <i class="flaticon-up-right-arrow"></i>
-                     <button data-mfp-src="{% static '#portfolio-wrapper' %}" class="portfolio-link modal-popup"></button>
-                  </div>
-               </div>               
-               <div class="portfolio-item mobile-app">
-                  <div class="image-box">
-                     <img src="{% static 'portfolio_app/assets/img/portfolio/3.jpg' %}" alt="" />
-                  </div>
-                  <div class="content-box">
-                     <h3 class="portfolio-title">Sebastian</h3>
-                     <p>Project was about precision and information.</p>
-                     <i class="flaticon-up-right-arrow"></i>
-                     <button data-mfp-src="{% static '#portfolio-wrapper' %}" class="portfolio-link modal-popup"></button>
-                  </div>
-               </div>
-               
             </div>
-           
          </div>
-          
-      </div>
-         </div>
-   <div class="justify-content-center text-center">
-                    <a href="{% url 'projects' %}" class="btn tj-btn-primary">More →</a>
+
+         <div class="row">
+    <div class="col-md-12">
+        <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
+            <div class="portfolio-sizer"></div>
+            <div class="gutter-sizer"></div>
+
+            <!-- Shelter Inmate and Staff Records Maintenance -->
+            <div class="portfolio-item branding">
+                <div class="image-box">
+                    <img src="{% static 'portfolio_app/assets/img/projects/gcc-web.png' %}" alt="" />
                 </div>
+                <div class="content-box">
+                    <h3 class="portfolio-title">Shelter Records System</h3>
+                    <p>Web platform for managing inmate and staff records in shelter facilities.</p>
+                    <i class="flaticon-up-right-arrow"></i>
+                    <button data-mfp-src="{% static '#portfolio-wrapper' %}"
+                        class="portfolio-link modal-popup"></button>
+                </div>
+            </div>
+
+            <!-- Staff Attendance by Face Detection -->
+            <div class="portfolio-item mobile-app">
+                <div class="image-box">
+                    <img src="{% static 'portfolio_app/assets/img/projects/gcc-app.png' %}" alt="" />
+                </div>
+                <div class="content-box">
+                    <h3 class="portfolio-title">Face Attendance App</h3>
+                    <p>Mobile app enabling staff attendance tracking through facial recognition technology.</p>
+                    <i class="flaticon-up-right-arrow"></i>
+                    <button data-mfp-src="{% static '#portfolio-wrapper' %}"
+                        class="portfolio-link modal-popup"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+      </div>
+      <div class="justify-content-center text-center">
+         <a href="{% url 'projects' %}" class="btn tj-btn-primary">More →</a>
+      </div>
 </section>
 <!-- PORTFOLIO SECTION END -->
 
@@ -306,67 +331,67 @@
 <!-- RESUME SECTION END -->
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-   const positions = [
-      "Web Developer",
-      "Python Developer",
-      "Django Developer",
-      "Full Stack Developer"
-   ];
-   
-   const typewriterElement = document.getElementById('typewriter');
-   const cursorElement = document.querySelector('.cursor');
-   
-   let positionIndex = 0;
-   let charIndex = 0;
-   let isDeleting = false;
-   let isPaused = false;
-   let pauseTime = 1500; // Time to pause at full word in ms
-   let typeSpeed = 100; // Base typing speed in ms
-   
-   function typeWriter() {
-      const currentPosition = positions[positionIndex];
-      
-      if (isDeleting) {
-      // Deleting text
-      typewriterElement.textContent = currentPosition.substring(0, charIndex - 1);
-      charIndex--;
-      typeSpeed = 50; // Delete faster than type
-      } else {
-      // Typing text
-      typewriterElement.textContent = currentPosition.substring(0, charIndex + 1);
-      charIndex++;
-      typeSpeed = 100; // Normal typing speed
+   document.addEventListener('DOMContentLoaded', function () {
+      const positions = [
+         "Web Developer",
+         "Python Developer",
+         "Django Developer",
+         "Full Stack Developer"
+      ];
+
+      const typewriterElement = document.getElementById('typewriter');
+      const cursorElement = document.querySelector('.cursor');
+
+      let positionIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let isPaused = false;
+      let pauseTime = 1500; // Time to pause at full word in ms
+      let typeSpeed = 100; // Base typing speed in ms
+
+      function typeWriter() {
+         const currentPosition = positions[positionIndex];
+
+         if (isDeleting) {
+            // Deleting text
+            typewriterElement.textContent = currentPosition.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50; // Delete faster than type
+         } else {
+            // Typing text
+            typewriterElement.textContent = currentPosition.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100; // Normal typing speed
+         }
+
+         // If we're at the end of the word and not currently deleting
+         if (charIndex === currentPosition.length && !isDeleting) {
+            isPaused = true;
+            setTimeout(() => {
+               isPaused = false;
+               isDeleting = true;
+               typeWriter();
+            }, pauseTime);
+            return;
+         }
+
+         // If we've deleted the entire word
+         if (charIndex === 0 && isDeleting) {
+            isDeleting = false;
+            positionIndex = (positionIndex + 1) % positions.length;
+         }
+
+         // Only continue typing if not paused
+         if (!isPaused) {
+            // Random speed variation for natural effect
+            const randomDelay = Math.random() * 50;
+            setTimeout(typeWriter, typeSpeed + randomDelay);
+         }
       }
-      
-      // If we're at the end of the word and not currently deleting
-      if (charIndex === currentPosition.length && !isDeleting) {
-      isPaused = true;
-      setTimeout(() => {
-         isPaused = false;
-         isDeleting = true;
-         typeWriter();
-      }, pauseTime);
-      return;
-      }
-      
-      // If we've deleted the entire word
-      if (charIndex === 0 && isDeleting) {
-      isDeleting = false;
-      positionIndex = (positionIndex + 1) % positions.length;
-      }
-      
-      // Only continue typing if not paused
-      if (!isPaused) {
-      // Random speed variation for natural effect
-      const randomDelay = Math.random() * 50;
-      setTimeout(typeWriter, typeSpeed + randomDelay);
-      }
-   }
-   
-   // Start the typing effect
-   typeWriter();
-});
+
+      // Start the typing effect
+      typeWriter();
+   });
 </script>
 
 
