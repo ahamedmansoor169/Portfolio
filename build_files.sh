@@ -1,31 +1,24 @@
 #!/bin/bash
-set -e  # Stop on first error
+set -e  # Exit on error
 
-# Check if python3.9 is available
-if ! command -v python3.9 &> /dev/null; then
-    echo "❌ python3.9 not found. Please install Python 3.9."
+echo "🔧 Starting build..."
+
+# Use python3 (whichever is available in the Vercel environment)
+if ! command -v python3 &> /dev/null; then
+    echo "❌ python3 not found in the environment."
     exit 1
 fi
 
-# Check if sqlite3 module is available
-if ! python3.9 -c "import sqlite3" &> /dev/null; then
-    echo "❌ Python 3.9 is missing SQLite support (_sqlite3)."
-    echo "👉 Install 'libsqlite3-dev' and recompile Python 3.9."
+# Check sqlite3 support (required by Django)
+if ! python3 -c "import sqlite3" &> /dev/null; then
+    echo "❌ SQLite3 support is missing in the Python environment. Cannot proceed."
     exit 1
 fi
 
-# Optional: Create virtual environment
-if [ ! -d "venv" ]; then
-    python3.9 -m venv venv
-fi
-
-source venv/bin/activate
-
-# Upgrade pip and install dependencies
-pip install --upgrade pip
+# Install dependencies (usually handled by Vercel, but safe to include)
 pip install -r requirements.txt
 
 # Collect static files
-python manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput
 
-echo "✅ Done."
+echo "✅ Build completed successfully."
