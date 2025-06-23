@@ -25,6 +25,8 @@ urlpatterns = [
     path("", include("portfolio_app.urls")),
 ]
 
+handler404 = 'portfolio_app.views.custom_404'
+
 if settings.DEBUG == True or False:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

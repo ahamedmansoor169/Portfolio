@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     {% load static %}
@@ -34,9 +33,80 @@
    <link rel="stylesheet" href="{% static 'portfolio_app/assets/css/responsive.css' %}">
    <link rel="stylesheet" href="{% static 'portfolio_app/assets/css/responsive-2.css' %}">
    <link rel="stylesheet" href="{% static 'portfolio_app/assets/css/responsive-3.css' %}">
+
+   <!-- Smoky Cursor CSS -->
+   <style>
+   .smoke-particle {
+       position: fixed;
+       pointer-events: none;
+       z-index: 9999;
+       border-radius: 50%;
+       opacity: 0.8;
+       animation: smoke-flow 2.5s ease-out forwards;
+       filter: blur(2px);
+   }
+
+   @keyframes smoke-flow {
+       0% {
+           transform: scale(0.2) translate(0, 0);
+           opacity: 0.8;
+           filter: blur(1px);
+       }
+       30% {
+           transform: scale(0.8) translate(var(--drift-x), -15px);
+           opacity: 0.6;
+           filter: blur(2px);
+       }
+       60% {
+           transform: scale(1.5) translate(var(--drift-x-mid), -35px);
+           opacity: 0.4;
+           filter: blur(3px);
+       }
+       100% {
+           transform: scale(2.2) translate(var(--drift-x-end), -60px);
+           opacity: 0;
+           filter: blur(4px);
+       }
+   }
+
+   .smoke-particle.purple {
+       background: radial-gradient(ellipse 80% 60%, 
+           rgba(147, 51, 234, 0.6) 0%, 
+           rgba(147, 51, 234, 0.3) 40%, 
+           rgba(147, 51, 234, 0.1) 70%, 
+           transparent 100%);
+       box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+   }
+
+   .smoke-particle.blue {
+       background: radial-gradient(ellipse 80% 60%, 
+           rgba(59, 130, 246, 0.6) 0%, 
+           rgba(59, 130, 246, 0.3) 40%, 
+           rgba(59, 130, 246, 0.1) 70%, 
+           transparent 100%);
+       box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+   }
+
+   .smoke-particle.pink {
+       background: radial-gradient(ellipse 80% 60%, 
+           rgba(236, 72, 153, 0.6) 0%, 
+           rgba(236, 72, 153, 0.3) 40%, 
+           rgba(236, 72, 153, 0.1) 70%, 
+           transparent 100%);
+       box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+   }
+
+   /* Custom cursor color */
+   * {
+       cursor: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'%3e%3cg transform='rotate(9 12 12)'%3e%3cpath fill='%23a855f7' d='M5.5,2L20.5,9L12.5,11L10.5,19L5.5,2Z'/%3e%3c/g%3e%3c/svg%3e") 12 12, auto;
+   }
+
+   </style>
 </head>
 
 <body>
+
+    
     {% include 'portfolio_app/nav.html' %}
     
       <!-- start: Back To Top -->
@@ -76,6 +146,99 @@
    <script src="{% static 'portfolio_app/assets/js/validate.min.js' %}"></script>
    <script src="{% static 'portfolio_app/assets/js/meanmenu.js' %}"></script>
    <script src="{% static 'portfolio_app/assets/js/main.js' %}"></script>
+
+   <!-- Smoky Cursor Script -->
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       const colors = ['purple', 'blue', 'pink'];
+       let mouseX = 0, mouseY = 0;
+       let lastMouseX = 0, lastMouseY = 0;
+       let isMoving = false;
+       let moveTimeout;
+
+       // Update mouse position and detect movement
+       document.addEventListener('mousemove', function(e) {
+           mouseX = e.clientX;
+           mouseY = e.clientY;
+           
+           // Check if cursor is actually moving
+           if (Math.abs(mouseX - lastMouseX) > 2 || Math.abs(mouseY - lastMouseY) > 2) {
+               isMoving = true;
+               
+               // Create smoke particle only when moving
+               if (Math.random() > 0.4) { // Reduce frequency
+                   createSmokeParticle(mouseX, mouseY);
+               }
+               
+               // Clear previous timeout
+               clearTimeout(moveTimeout);
+               
+               // Set timeout to stop creating particles when cursor stops
+               moveTimeout = setTimeout(() => {
+                   isMoving = false;
+               }, 100);
+           }
+           
+           lastMouseX = mouseX;
+           lastMouseY = mouseY;
+       });
+
+       // Enhanced click effect
+       document.addEventListener('mousedown', function() {
+           // Create burst of particles on click
+           for(let i = 0; i < 8; i++) {
+               setTimeout(() => {
+                   createSmokeParticle(
+                       mouseX + (Math.random() - 0.5) * 40, 
+                       mouseY + (Math.random() - 0.5) * 40
+                   );
+               }, i * 30);
+           }
+       });
+
+       function createSmokeParticle(x, y) {
+           const particle = document.createElement('div');
+           particle.className = `smoke-particle ${colors[Math.floor(Math.random() * colors.length)]}`;
+           
+           // Random size for variety
+           const size = Math.random() * 20 + 10; // 10-30px
+           particle.style.width = size + 'px';
+           particle.style.height = size + 'px';
+           
+           // Random drift patterns
+           const driftX = (Math.random() - 0.5) * 40;
+           const driftXMid = driftX + (Math.random() - 0.5) * 30;
+           const driftXEnd = driftXMid + (Math.random() - 0.5) * 50;
+           
+           particle.style.left = x + 'px';
+           particle.style.top = y + 'px';
+           particle.style.setProperty('--drift-x', driftX + 'px');
+           particle.style.setProperty('--drift-x-mid', driftXMid + 'px');
+           particle.style.setProperty('--drift-x-end', driftXEnd + 'px');
+           
+           document.body.appendChild(particle);
+           
+           // Remove particle after animation
+           setTimeout(() => {
+               if (particle.parentNode) {
+                   particle.parentNode.removeChild(particle);
+               }
+           }, 2500);
+       }
+
+       // Performance optimization - clean up particles periodically
+       setInterval(() => {
+           const particles = document.querySelectorAll('.smoke-particle');
+           if (particles.length > 30) {
+               for (let i = 0; i < 10; i++) {
+                   if (particles[i] && particles[i].parentNode) {
+                       particles[i].parentNode.removeChild(particles[i]);
+                   }
+               }
+           }
+       }, 3000);
+   });
+   </script>
 </body>
 
 </html>

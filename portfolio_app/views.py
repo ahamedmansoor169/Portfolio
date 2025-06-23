@@ -32,3 +32,6 @@ def projects(request):
 
 def services(request):
     return render(request, "portfolio_app/services.html")
+
+def custom_404(request, exception):
+    return render(request, "portfolio_app/404.html", status=404)
