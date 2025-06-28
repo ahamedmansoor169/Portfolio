@@ -3,6 +3,12 @@
 {% block title %}Projects Page{% endblock %}
 {% block content %}
 
+<style>
+   .title {
+      font-size: 28px;
+   }
+</style>
+
 <!-- START: Breadcrumb Area -->
 <section class="breadcrumb_area" data-bg-image="./portfolio_app/assets/img/breadcrumb/breadcrumb-bg.jpg" data-bg-color="#140C1C">
    <div class="container">
@@ -82,9 +88,7 @@
                      <h3 class="portfolio-title">Donation Management System</h3>
                      <p>Online platform designed to securely collect, manage, and track donation-related data for temples and charitable institutions.</p>
                      <i class="flaticon-up-right-arrow"></i>
-                     <a href="https://quickpay.srisankarapuram.com/in/" target="_blank" class="portfolio-link">
-                        <button class="modal-popup"></button>
-                     </a>
+                     <a href="#donation-management-modal" class="portfolio-link modal-popup"></a>
                   </div>
                   </div>
                <div class="portfolio-item website">
@@ -95,9 +99,7 @@
                      <h3 class="portfolio-title">Tulu World Platform</h3>
                      <p>An integrated cultural and community portal dedicated to promoting Tulu language, heritage, and traditions through news, events, and digital outreach.</p>
                      <i class="flaticon-up-right-arrow"></i>
-                     <a href="https://www.tuluworld.org.in/" target="_blank" class="portfolio-link">
-                        <button class="modal-popup"></button>
-                     </a>
+                     <a href="#tulu-world-modal" class="portfolio-link modal-popup"></a>
                   </div>
                </div>
               <div class="portfolio-item website">
@@ -108,9 +110,7 @@
                   <h3 class="portfolio-title">M7 Studios Dashboard</h3>
                   <p>Designed and developed a custom dashboard for M7 Studios to streamline project management, client tracking, and internal workflows with a modern UI and responsive interface.</p>
                   <i class="flaticon-up-right-arrow"></i>
-                  <a href="https://m7-studios.com/" target="_blank" class="portfolio-link">
-                     <button class="modal-popup"></button>
-                  </a>
+                  <a href="#m7studio-modal" class="portfolio-link modal-popup"></a>
                </div>
             </div>
 
@@ -237,7 +237,486 @@
                <i class="fal fa-arrow-left"></i>
                <div class="nav_project">
                   <div class="label">Previous Project</div>
-                  <h3 class="title">Face Attendance App</h3>
+                  <h3 class="title" style="font-size: 28px;">Face Attendance App</h3>
+               </div>
+            </a>
+         </div>
+         <div class="navigation_item next-project">
+            <a href="#custom-song-modal" class="project modal-popup">
+               <div class="nav_project">
+                  <div class="label">Next Project</div>
+                  <h3 class="title" style="font-size: 28px;">Custom Song Platform</h3>
+               </div>
+               <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Custom Song Platform Modal -->
+<div id="custom-song-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+   <div class="popup_modal_img">
+      <img src="{% static 'portfolio_app/assets/img/projects/custom-song-1.png' %}" alt="Custom Song Platform" />
+   </div>
+   <div class="popup_modal_content">
+      <div class="portfolio_info">
+         <div class="portfolio_info_text">
+            <h2 class="title">Custom Song Platform</h2>
+            <div class="desc">
+               <p>
+                  A comprehensive web platform that allows users to create personalized songs based on their life stories. 
+                  Features include customer management dashboard, relationship manager portal, payment integration, 
+                  and WhatsApp API for seamless customer communication and song sharing.
+               </p>
+            </div>
+            <a href="https://acustomsong.com/" target="_blank" class="btn tj-btn-primary">
+               Live Preview <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="portfolio_info_items">
+            <div class="info_item">
+               <div class="key">Category</div>
+               <div class="value">Web Application</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Client</div>
+               <div class="value">Custom Song Services</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Start Date</div>
+               <div class="value">January 2024</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Technologies</div>
+               <div class="value">Django, MySQL, Django REST Framework, WhatsApp API, Razorpay</div>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_gallery owl-carousel">
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/custom-song-1.png' %}" alt="Custom Song Platform" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/custom-1.png' %}" alt="Platform Interface" />
+         </div>
+      </div>
+      <div class="portfolio_description">
+         <h2 class="title">Project Description</h2>
+         <div class="desc">
+            <p>
+               The Custom Song Platform is an innovative web application that revolutionizes the way people create 
+               personalized music. Users can order custom songs based on their life stories, relationships, and 
+               special moments. The platform provides a complete ecosystem for song creation, customer management, 
+               and delivery.
+            </p>
+
+            <p>
+               Built with Django for robust backend functionality and HTML/CSS/JavaScript for a modern, responsive 
+               frontend, the platform integrates MySQL database for efficient data management. The system features 
+               Django REST Framework APIs for seamless data handling, WhatsApp API for customer communication, 
+               and Razorpay integration for secure payment processing.
+            </p>
+         </div>
+      </div>
+      <div class="portfolio_story_approach">
+         <div class="portfolio_story">
+            <div class="story_title">
+               <h4 class="title">The Story</h4>
+            </div>
+            <div class="story_content">
+               <p>
+                  The idea was to create a platform where people could turn their life stories, memories, and 
+                  emotions into personalized songs. The challenge was to build a comprehensive system that could 
+                  handle the entire process from order placement to song delivery, while providing excellent 
+                  customer service and maintaining detailed records of all transactions and customer interactions.
+               </p>
+            </div>
+         </div>
+         <div class="portfolio_approach">
+            <div class="approach_title">
+               <h4 class="title">Our Approach</h4>
+            </div>
+            <div class="approach_content">
+               <p>
+                  We developed a full-stack web application using Django framework with MySQL database for 
+                  reliable data storage. The platform includes a customer dashboard for order management, 
+                  a relationship manager portal for staff to maintain customer details and track collections, 
+                  and integrated payment processing through Razorpay. WhatsApp API integration enables seamless 
+                  communication with customers for sharing customized songs and updates.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_navigation">
+         <div class="navigation_item prev-project">
+            <a href="#shelter-records-modal" class="project modal-popup">
+               <i class="fal fa-arrow-left"></i>
+               <div class="nav_project">
+                  <div class="label">Previous Project</div>
+                  <h3 class="title" style="font-size: 28px;">Shelter Records System</h3>
+               </div>
+            </a>
+         </div>
+         <div class="navigation_item next-project">
+            <a href="#donation-management-modal" class="project modal-popup">
+               <div class="nav_project">
+                  <div class="label">Next Project</div>
+                  <h3 class="title" style="font-size: 28px;">Donation Management System</h3>
+               </div>
+               <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Donation Management System Modal -->
+<div id="donation-management-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+   <div class="popup_modal_img">
+      <img src="{% static 'portfolio_app/assets/img/projects/qp-ss.png' %}" alt="Donation Management System" />
+   </div>
+   <div class="popup_modal_content">
+      <div class="portfolio_info">
+         <div class="portfolio_info_text">
+            <h2 class="title">Donation Management System</h2>
+            <div class="desc">
+               <p>
+                  A comprehensive online platform designed to securely collect, manage, and track donation-related data 
+                  for temples and charitable institutions. Features include donor management, payment processing, 
+                  subscription handling, and WhatsApp integration for seamless communication.
+               </p>
+            </div>
+            <a href="https://quickpay.srisankarapuram.com/in/" target="_blank" class="btn tj-btn-primary">
+               Live Preview <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="portfolio_info_items">
+            <div class="info_item">
+               <div class="key">Category</div>
+               <div class="value">Web Application</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Client</div>
+               <div class="value">Temple & Charitable Institutions</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Start Date</div>
+               <div class="value">February 2024</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Technologies</div>
+               <div class="value">Django, MySQL, HTML/CSS/JS, WhatsApp API, Razorpay</div>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_gallery owl-carousel">
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/qp-ss.png' %}" alt="Donation Management System" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/qp-ss-1.png' %}" alt="Dashboard Interface" />
+         </div>
+      </div>
+      <div class="portfolio_description">
+         <h2 class="title">Project Description</h2>
+         <div class="desc">
+            <p>
+               The Donation Management System is a robust web application built to streamline the donation collection 
+               and management process for religious institutions and charitable organizations. The platform provides 
+               a secure, user-friendly interface for donors to make contributions while offering comprehensive 
+               administrative tools for managing donation records and donor information.
+            </p>
+
+            <p>
+               Built with Django framework for powerful backend functionality, the system uses MySQL database for 
+               reliable data storage and management. The frontend is developed using HTML, CSS, and JavaScript to 
+               create a responsive and intuitive user experience. The platform integrates WhatsApp API for real-time 
+               communication with donors and Razorpay payment gateway for secure transaction processing, including 
+               subscription-based donations.
+            </p>
+         </div>
+      </div>
+      <div class="portfolio_story_approach">
+         <div class="portfolio_story">
+            <div class="story_title">
+               <h4 class="title">The Story</h4>
+            </div>
+            <div class="story_content">
+               <p>
+                  Religious institutions and charitable organizations needed a modern, secure platform to manage 
+                  their donation collection process. The challenge was to create a system that could handle both 
+                  one-time donations and recurring subscriptions while providing transparent tracking and reporting 
+                  capabilities. The system needed to integrate seamlessly with popular payment gateways and 
+                  communication platforms to enhance donor engagement and trust.
+               </p>
+            </div>
+         </div>
+         <div class="portfolio_approach">
+            <div class="approach_title">
+               <h4 class="title">Our Approach</h4>
+            </div>
+            <div class="approach_content">
+               <p>
+                  We developed a comprehensive Django-based web application with MySQL database for efficient data 
+                  management. The system features a donor-friendly interface for easy donation processing, 
+                  administrative dashboard for donation tracking and reporting, and integrated Razorpay payment 
+                  gateway for secure transactions including subscription management. WhatsApp API integration 
+                  enables automated communication with donors for payment confirmations, receipts, and updates. 
+                  The platform provides detailed analytics and reporting tools for better donation management.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_navigation">
+         <div class="navigation_item prev-project">
+            <a href="#custom-song-modal" class="project modal-popup">
+               <i class="fal fa-arrow-left"></i>
+               <div class="nav_project">
+                  <div class="label">Previous Project</div>
+                  <h3 class="title" style="font-size: 28px;">Custom Song Platform</h3>
+               </div>
+            </a>
+         </div>
+         <div class="navigation_item next-project">
+            <a href="#tulu-world-modal" class="project modal-popup">
+               <div class="nav_project">
+                  <div class="label">Next Project</div>
+                  <h3 class="title" style="font-size: 28px;">Tulu World Platform</h3>
+               </div>
+               <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Tulu World Platform Modal -->
+<div id="tulu-world-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+   <div class="popup_modal_img">
+      <img src="{% static 'portfolio_app/assets/img/projects/tulu.png' %}" alt="Tulu World Platform" />
+   </div>
+   <div class="popup_modal_content">
+      <div class="portfolio_info">
+         <div class="portfolio_info_text">
+            <h2 class="title">Tulu World Platform</h2>
+            <div class="desc">
+               <p>
+                  A comprehensive cultural and community portal dedicated to promoting Tulu language, heritage, and traditions. 
+                  Features include donation management system, subscription handling, email notifications, and admin dashboard 
+                  for campaign creation and detailed reporting.
+               </p>
+            </div>
+            <a href="https://www.tuluworld.org.in/" target="_blank" class="btn tj-btn-primary">
+               Live Preview <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="portfolio_info_items">
+            <div class="info_item">
+               <div class="key">Category</div>
+               <div class="value">Web Application</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Client</div>
+               <div class="value">Tulu World Community</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Start Date</div>
+               <div class="value">January 2024</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Technologies</div>
+               <div class="value">Django, MySQL, HTML/CSS/JS, Easebuzz Payment Gateway</div>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_gallery owl-carousel">
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/tulu.png' %}" alt="Tulu World Platform" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/tulu-1.png' %}" alt="Dashboard Interface" />
+         </div>
+      </div>
+      <div class="portfolio_description">
+         <h2 class="title">Project Description</h2>
+         <div class="desc">
+            <p>
+               Tulu World Platform is an integrated cultural and community portal designed to preserve and promote 
+               Tulu language, heritage, and traditions. The platform serves as a comprehensive digital hub for the 
+               Tulu-speaking community, offering news, events, cultural content, and a robust donation management 
+               system to support community initiatives.
+            </p>
+
+            <p>
+               Built with Django framework for powerful backend functionality and MySQL database for reliable data 
+               storage, the platform features a modern, responsive frontend using HTML, CSS, and JavaScript. The 
+               system integrates Easebuzz payment gateway for secure donation processing, including subscription-based 
+               contributions. The platform includes automated email notifications using API schedulers and a comprehensive 
+               admin dashboard for campaign management and detailed reporting.
+            </p>
+         </div>
+      </div>
+      <div class="portfolio_story_approach">
+         <div class="portfolio_story">
+            <div class="story_title">
+               <h4 class="title">The Story</h4>
+            </div>
+            <div class="story_content">
+               <p>
+                  The Tulu World community needed a comprehensive digital platform to preserve their cultural heritage 
+                  and promote the Tulu language. The challenge was to create a system that could handle donation 
+                  collection for community initiatives while providing a modern interface for cultural content sharing. 
+                  The platform needed to support both one-time donations and recurring subscriptions, with automated 
+                  communication and detailed reporting capabilities for transparent fund management.
+               </p>
+            </div>
+         </div>
+         <div class="portfolio_approach">
+            <div class="approach_title">
+               <h4 class="title">Our Approach</h4>
+            </div>
+            <div class="approach_content">
+               <p>
+                  We developed a full-stack Django application with MySQL database for efficient data management. 
+                  The platform integrates Easebuzz payment gateway for secure donation processing, supporting both 
+                  one-time contributions and subscription-based donations. The system features a comprehensive admin 
+                  dashboard where administrators can create donation campaigns, view detailed reports, and track 
+                  collections. Automated email notifications are handled through API schedulers to keep donors 
+                  informed about their contributions and campaign updates. The platform provides donor management 
+                  with detailed profiles and contribution history tracking.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_navigation">
+         <div class="navigation_item prev-project">
+            <a href="#donation-management-modal" class="project modal-popup">
+               <i class="fal fa-arrow-left"></i>
+               <div class="nav_project">
+                  <div class="label">Previous Project</div>
+                  <h3 class="title" style="font-size: 28px;">Donation Management System</h3>
+               </div>
+            </a>
+         </div>
+         <div class="navigation_item next-project">
+            <a href="#m7studio-modal" class="project modal-popup">
+               <div class="nav_project">
+                  <div class="label">Next Project</div>
+                  <h3 class="title" style="font-size: 28px;">M7 Studios Dashboard</h3>
+               </div>
+               <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- M7 Studios Dashboard Modal -->
+<div id="m7studio-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+   <div class="popup_modal_img">
+      <img src="{% static 'portfolio_app/assets/img/projects/m7studio.png' %}" alt="M7 Studios Dashboard" />
+   </div>
+   <div class="popup_modal_content">
+      <div class="portfolio_info">
+         <div class="portfolio_info_text">
+            <h2 class="title">M7 Studios Dashboard</h2>
+            <div class="desc">
+               <p>
+                  A comprehensive web platform for M7 Studios featuring AI-powered lip sync and photo-to-video conversion 
+                  services. The system includes customer management, payment processing, and detailed reporting capabilities 
+                  for monthly collections and service analytics.
+               </p>
+            </div>
+            <a href="https://m7-studios.com/" target="_blank" class="btn tj-btn-primary">
+               Live Preview <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="portfolio_info_items">
+            <div class="info_item">
+               <div class="key">Category</div>
+               <div class="value">Web Application</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Client</div>
+               <div class="value">M7 Studios</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Start Date</div>
+               <div class="value">December 2023</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Technologies</div>
+               <div class="value">Django, MySQL, HTML/CSS/JS, Hugging Face API, Razorpay</div>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_gallery owl-carousel">
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/m7studio.png' %}" alt="M7 Studios Dashboard" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/m7studio-1.png' %}" alt="Dashboard Interface" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/m7studio-2.png' %}" alt="AI Services" />
+         </div>
+      </div>
+      <div class="portfolio_description">
+         <h2 class="title">Project Description</h2>
+         <div class="desc">
+            <p>
+               M7 Studios Dashboard is an innovative web platform that provides AI-powered creative services including 
+               lip sync technology and photo-to-video conversion. The system leverages Hugging Face API models to 
+               deliver high-quality AI-generated content while providing comprehensive business management tools.
+            </p>
+
+            <p>
+               Built with Django framework for robust backend functionality and MySQL database for efficient data 
+               management, the platform features a modern, responsive frontend using HTML, CSS, and JavaScript. 
+               The system integrates Razorpay payment gateway for seamless transaction processing and includes 
+               advanced reporting features for business analytics and monthly collection tracking.
+            </p>
+         </div>
+      </div>
+      <div class="portfolio_story_approach">
+         <div class="portfolio_story">
+            <div class="story_title">
+               <h4 class="title">The Story</h4>
+            </div>
+            <div class="story_content">
+               <p>
+                  M7 Studios needed a comprehensive platform to offer AI-powered creative services including lip sync 
+                  and photo-to-video conversion. The challenge was to create a system that could integrate advanced 
+                  AI models from Hugging Face while providing efficient customer management, secure payment processing, 
+                  and detailed business analytics. The platform needed to handle complex AI processing workflows 
+                  while maintaining a user-friendly interface for both customers and administrators.
+               </p>
+            </div>
+         </div>
+         <div class="portfolio_approach">
+            <div class="approach_title">
+               <h4 class="title">Our Approach</h4>
+            </div>
+            <div class="approach_content">
+               <p>
+                  We developed a full-stack Django application with MySQL database for reliable data storage and 
+                  management. The platform integrates Hugging Face API models for AI-powered lip sync and photo-to-video 
+                  conversion services. The system features a comprehensive dashboard for customer management, 
+                  order tracking, and detailed reporting capabilities including monthly collection analytics. 
+                  Razorpay integration ensures secure payment processing for all services. The frontend is built 
+                  with modern HTML, CSS, and JavaScript to provide an intuitive user experience across all devices.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_navigation">
+         <div class="navigation_item prev-project">
+            <a href="#tulu-world-modal" class="project modal-popup">
+               <i class="fal fa-arrow-left"></i>
+               <div class="nav_project">
+                  <div class="label">Previous Project</div>
+                  <h3 class="title" style="font-size: 28px;">Tulu World Platform</h3>
                </div>
             </a>
          </div>
@@ -245,7 +724,7 @@
             <a href="#face-attendance-modal" class="project modal-popup">
                <div class="nav_project">
                   <div class="label">Next Project</div>
-                  <h3 class="title">Face Attendance App</h3>
+                  <h3 class="title" style="font-size: 28px;">Face Attendance App</h3>
                </div>
                <i class="fal fa-arrow-right"></i>
             </a>
@@ -347,11 +826,11 @@
       </div>
       <div class="portfolio_navigation">
          <div class="navigation_item prev-project">
-            <a href="#shelter-records-modal" class="project modal-popup">
+            <a href="#m7studio-modal" class="project modal-popup">
                <i class="fal fa-arrow-left"></i>
                <div class="nav_project">
                   <div class="label">Previous Project</div>
-                  <h3 class="title">Shelter Records System</h3>
+                  <h3 class="title" style="font-size: 28px;">M7 Studios Dashboard</h3>
                </div>
             </a>
          </div>
@@ -359,124 +838,7 @@
             <a href="#shelter-records-modal" class="project modal-popup">
                <div class="nav_project">
                   <div class="label">Next Project</div>
-                  <h3 class="title">Shelter Records System</h3>
-               </div>
-               <i class="fal fa-arrow-right"></i>
-            </a>
-         </div>
-      </div>
-   </div>
-</div>
-
-<!-- Custom Song Platform Modal -->
-<div id="custom-song-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
-   <div class="popup_modal_img">
-      <img src="{% static 'portfolio_app/assets/img/projects/custom-song-1.png' %}" alt="Custom Song Platform" />
-   </div>
-   <div class="popup_modal_content">
-      <div class="portfolio_info">
-         <div class="portfolio_info_text">
-            <h2 class="title">Custom Song Platform</h2>
-            <div class="desc">
-               <p>
-                  A comprehensive web platform that allows users to create personalized songs based on their life stories. 
-                  Features include customer management dashboard, relationship manager portal, payment integration, 
-                  and WhatsApp API for seamless customer communication and song sharing.
-               </p>
-            </div>
-            <a href="https://acustomsong.com/" target="_blank" class="btn tj-btn-primary">
-               Live Preview <i class="fal fa-arrow-right"></i>
-            </a>
-         </div>
-         <div class="portfolio_info_items">
-            <div class="info_item">
-               <div class="key">Category</div>
-               <div class="value">Web Application</div>
-            </div>
-            <div class="info_item">
-               <div class="key">Client</div>
-               <div class="value">Custom Song Services</div>
-            </div>
-            <div class="info_item">
-               <div class="key">Start Date</div>
-               <div class="value">January 2024</div>
-            </div>
-            <div class="info_item">
-               <div class="key">Technologies</div>
-               <div class="value">Django, MySQL, Django REST Framework, WhatsApp API, Razorpay</div>
-            </div>
-         </div>
-      </div>
-      <div class="portfolio_gallery owl-carousel">
-         <div class="gallery_item">
-            <img src="{% static 'portfolio_app/assets/img/projects/custom-song-1.png' %}" alt="Custom Song Platform" />
-         </div>
-         <div class="gallery_item">
-            <img src="{% static 'portfolio_app/assets/img/projects/custom-song.png' %}" alt="Platform Interface" />
-         </div>
-      </div>
-      <div class="portfolio_description">
-         <h2 class="title">Project Description</h2>
-         <div class="desc">
-            <p>
-               The Custom Song Platform is an innovative web application that revolutionizes the way people create 
-               personalized music. Users can order custom songs based on their life stories, relationships, and 
-               special moments. The platform provides a complete ecosystem for song creation, customer management, 
-               and delivery.
-            </p>
-
-            <p>
-               Built with Django for robust backend functionality and HTML/CSS/JavaScript for a modern, responsive 
-               frontend, the platform integrates MySQL database for efficient data management. The system features 
-               Django REST Framework APIs for seamless data handling, WhatsApp API for customer communication, 
-               and Razorpay integration for secure payment processing.
-            </p>
-         </div>
-      </div>
-      <div class="portfolio_story_approach">
-         <div class="portfolio_story">
-            <div class="story_title">
-               <h4 class="title">The Story</h4>
-            </div>
-            <div class="story_content">
-               <p>
-                  The idea was to create a platform where people could turn their life stories, memories, and 
-                  emotions into personalized songs. The challenge was to build a comprehensive system that could 
-                  handle the entire process from order placement to song delivery, while providing excellent 
-                  customer service and maintaining detailed records of all transactions and customer interactions.
-               </p>
-            </div>
-         </div>
-         <div class="portfolio_approach">
-            <div class="approach_title">
-               <h4 class="title">Our Approach</h4>
-            </div>
-            <div class="approach_content">
-               <p>
-                  We developed a full-stack web application using Django framework with MySQL database for 
-                  reliable data storage. The platform includes a customer dashboard for order management, 
-                  a relationship manager portal for staff to maintain customer details and track collections, 
-                  and integrated payment processing through Razorpay. WhatsApp API integration enables seamless 
-                  communication with customers for sharing customized songs and updates.
-               </p>
-            </div>
-         </div>
-      </div>
-      <div class="portfolio_navigation">
-         <div class="navigation_item prev-project">
-            <a href="#face-attendance-modal" class="project modal-popup">
-               <i class="fal fa-arrow-left"></i>
-               <div class="nav_project">
-                  <div class="label">Previous Project</div>
-                  <h3 class="title">Face Attendance App</h3>
-               </div>
-            </a>
-         </div>
-         <div class="navigation_item next-project">
-            <a href="#shelter-records-modal" class="project modal-popup">
-               <div class="nav_project">
-                  <div class="label">Next Project</div>
-                  <h3 class="title">Shelter Records System</h3>
+                  <h3 class="title" style="font-size: 28px;">Shelter Records System</h3>
                </div>
                <i class="fal fa-arrow-right"></i>
             </a>
