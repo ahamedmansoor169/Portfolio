@@ -125,7 +125,7 @@
       </div>
    </div>
 </section>
-<!-- HERO SECTION END -->
+<!-- HERO SECTION END -->
 
 <!-- SKILLS SECTION START -->
 <section class="skills-section" id="skills-section">
@@ -254,9 +254,7 @@
                     <h3 class="portfolio-title">Shelter Records System</h3>
                     <p>Web platform for managing inmate and staff records in shelter facilities.</p>
                     <i class="flaticon-up-right-arrow"></i>
-                    <a href="https://nightshelter.gccservices.in/" target="_blank" class="portfolio-link">
-                        <button class="modal-popup"></button>
-                     </a>
+                    <a href="#shelter-records-modal" class="portfolio-link modal-popup"></a>
                 </div>
             </div>
 
@@ -269,8 +267,7 @@
                     <h3 class="portfolio-title">Face Attendance App</h3>
                     <p>Mobile app enabling staff attendance tracking through facial recognition technology.</p>
                     <i class="flaticon-up-right-arrow"></i>
-                    <button data-mfp-src="{% static '#portfolio-wrapper' %}"
-                        class="portfolio-link modal-popup"></button>
+                    <a href="#face-attendance-modal" class="portfolio-link modal-popup"></a>
                 </div>
             </div>
         </div>
@@ -340,6 +337,239 @@
    </div>
 </section>
 <!-- RESUME SECTION END -->
+
+<!-- PORTFOLIO MODALS START -->
+
+<!-- Shelter Records System Modal -->
+<div id="shelter-records-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+   <div class="popup_modal_img">
+      <img src="{% static 'portfolio_app/assets/img/projects/gcc-1.png' %}" alt="Shelter Records System" />
+   </div>
+   <div class="popup_modal_content">
+      <div class="portfolio_info">
+         <div class="portfolio_info_text">
+            <h2 class="title">Shelter Records System</h2>
+            <div class="desc">
+               <p>
+                  A comprehensive web platform designed for Greater Chennai Corporation to manage inmate and staff records 
+                  in shelter facilities. The system provides secure and efficient record maintenance with advanced 
+                  face recognition capabilities for staff identification.
+               </p>
+            </div>
+            <a href="https://nightshelter.gccservices.in/" target="_blank" class="btn tj-btn-primary">
+               Live Preview <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="portfolio_info_items">
+            <div class="info_item">
+               <div class="key">Category</div>
+               <div class="value">Web Application</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Client</div>
+               <div class="value">Greater Chennai Corporation</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Start Date</div>
+               <div class="value">March 2024</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Technologies</div>
+               <div class="value">Django, PostgreSQL, Milvus DB</div>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_gallery owl-carousel">
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/gcc-1.png' %}" alt="Shelter Records System" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/gcc-web.png' %}" alt="Web Interface" />
+         </div>
+      </div>
+      <div class="portfolio_description">
+         <h2 class="title">Project Description</h2>
+         <div class="desc">
+            <p>
+               The Shelter Records System is a comprehensive web application developed for Greater Chennai Corporation 
+               to efficiently manage and maintain records of inmates and staff across various shelter facilities. 
+               The system provides a centralized platform for record keeping, staff management, and facility oversight.
+            </p>
+
+            <p>
+               Built with Django framework for robust backend functionality, the application features a responsive 
+               frontend using HTML, CSS, and JavaScript. The system integrates advanced face recognition technology 
+               for secure staff identification and attendance tracking, ensuring accurate record maintenance.
+            </p>
+         </div>
+      </div>
+      <div class="portfolio_story_approach">
+         <div class="portfolio_story">
+            <div class="story_title">
+               <h4 class="title">The Story</h4>
+            </div>
+            <div class="story_content">
+               <p>
+                  Greater Chennai Corporation needed a modern, efficient system to manage their shelter facilities 
+                  and maintain comprehensive records of both inmates and staff. The existing manual processes were 
+                  time-consuming and prone to errors. The challenge was to create a secure, user-friendly platform 
+                  that could handle large volumes of data while providing real-time access to critical information.
+               </p>
+            </div>
+         </div>
+         <div class="portfolio_approach">
+            <div class="approach_title">
+               <h4 class="title">Our Approach</h4>
+            </div>
+            <div class="approach_content">
+               <p>
+                  We developed a Django-based web application with PostgreSQL for primary data storage and Milvus DB 
+                  for efficient face recognition vector storage. The system features role-based access control, 
+                  real-time data synchronization, and an intuitive interface for easy navigation. Face recognition 
+                  technology was integrated using advanced algorithms to ensure accurate staff identification and 
+                  attendance tracking.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_navigation">
+         <div class="navigation_item prev-project">
+            <a href="#face-attendance-modal" class="project modal-popup">
+               <i class="fal fa-arrow-left"></i>
+               <div class="nav_project">
+                  <div class="label">Previous Project</div>
+                  <h3 class="title">Face Attendance App</h3>
+               </div>
+            </a>
+         </div>
+         <div class="navigation_item next-project">
+            <a href="#face-attendance-modal" class="project modal-popup">
+               <div class="nav_project">
+                  <div class="label">Next Project</div>
+                  <h3 class="title">Face Attendance App</h3>
+               </div>
+               <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Face Attendance App Modal -->
+<div id="face-attendance-modal" class="popup_content_area zoom-anim-dialog mfp-hide" data-lenis-prevent>
+   <div class="popup_modal_img">
+      <img src="{% static 'portfolio_app/assets/img/projects/gcc-app.png' %}" alt="Face Attendance App" />
+   </div>
+   <div class="popup_modal_content">
+      <div class="portfolio_info">
+         <div class="portfolio_info_text">
+            <h2 class="title">Face Attendance App</h2>
+            <div class="desc">
+               <p>
+                  A mobile application with Django REST Framework API backend that enables staff attendance tracking 
+                  through advanced facial recognition technology. The app uses DeepFace with ArcFace algorithm for 
+                  precise face detection and identification.
+               </p>
+            </div>
+            <a href="#" class="btn tj-btn-primary">
+               View Details <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+         <div class="portfolio_info_items">
+            <div class="info_item">
+               <div class="key">Category</div>
+               <div class="value">Mobile Application</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Client</div>
+               <div class="value">Greater Chennai Corporation</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Start Date</div>
+               <div class="value">April 2024</div>
+            </div>
+            <div class="info_item">
+               <div class="key">Technologies</div>
+               <div class="value">Django REST Framework, DeepFace, ArcFace</div>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_gallery owl-carousel">
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/gcc-app.png' %}" alt="Face Attendance App" />
+         </div>
+         <div class="gallery_item">
+            <img src="{% static 'portfolio_app/assets/img/projects/gcc-app-1.png' %}" alt="System Integration" />
+         </div>
+      </div>
+      <div class="portfolio_description">
+         <h2 class="title">Project Description</h2>
+         <div class="desc">
+            <p>
+               The Face Attendance App is a sophisticated mobile application designed to streamline staff attendance 
+               tracking for Greater Chennai Corporation's shelter facilities. The app leverages cutting-edge facial 
+               recognition technology to provide secure, contactless attendance management.
+            </p>
+
+            <p>
+               Built with Django REST Framework for robust API functionality, the application integrates DeepFace 
+               library with ArcFace algorithm for highly accurate face detection and recognition. The system ensures 
+               real-time attendance tracking while maintaining data security and privacy standards.
+            </p>
+         </div>
+      </div>
+      <div class="portfolio_story_approach">
+         <div class="portfolio_story">
+            <div class="story_title">
+               <h4 class="title">The Story</h4>
+            </div>
+            <div class="story_content">
+               <p>
+                  Greater Chennai Corporation required an automated attendance system for their shelter staff that 
+                  could eliminate manual processes and reduce administrative overhead. The challenge was to create 
+                  a reliable, secure, and user-friendly mobile application that could accurately identify staff 
+                  members and track their attendance in real-time.
+               </p>
+            </div>
+         </div>
+         <div class="portfolio_approach">
+            <div class="approach_title">
+               <h4 class="title">Our Approach</h4>
+            </div>
+            <div class="approach_content">
+               <p>
+                  We developed a mobile application with Django REST Framework backend API that integrates DeepFace 
+                  library for facial recognition. The ArcFace algorithm was specifically chosen for its superior 
+                  accuracy in face detection and recognition. The app features secure authentication, real-time 
+                  data synchronization, and comprehensive attendance reporting capabilities.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio_navigation">
+         <div class="navigation_item prev-project">
+            <a href="#shelter-records-modal" class="project modal-popup">
+               <i class="fal fa-arrow-left"></i>
+               <div class="nav_project">
+                  <div class="label">Previous Project</div>
+                  <h3 class="title">Shelter Records System</h3>
+               </div>
+            </a>
+         </div>
+         <div class="navigation_item next-project">
+            <a href="#shelter-records-modal" class="project modal-popup">
+               <div class="nav_project">
+                  <div class="label">Next Project</div>
+                  <h3 class="title">Shelter Records System</h3>
+               </div>
+               <i class="fal fa-arrow-right"></i>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- PORTFOLIO MODALS END -->
 
 <script>
    document.addEventListener('DOMContentLoaded', function () {
