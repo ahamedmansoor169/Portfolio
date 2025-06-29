@@ -18,10 +18,15 @@
                 </nav>
              </div>
              <div class="copy-text">
-                <p>&copy; 2025 All rights reserved by <a href="#" target="_blank">Ahamed Mansoor</a></p>
+                <p>&copy; <span id="current-year"></span> All rights reserved by <a href="#" target="_blank">Ahamed Mansoor</a></p>
              </div>
           </div>
        </div>
     </div>
  </footer>
  <!-- FOOTER AREA END -->
+ 
+ <script>
+    // Update the current year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+ </script>
