@@ -84,11 +84,11 @@ WSGI_APPLICATION = "portfolio_project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "railway",
-        "USER": "postgres",
-        "PASSWORD": "dPyWcpELcQqEKgOrzBRaVIiQcHfWlAEv",
-        "HOST": "crossover.proxy.rlwy.net",
-        "PORT": "27568",
+        "NAME": "defaultdb",
+        "USER": "avnadmin",
+        "PASSWORD": "AVNS_s8PpVM_W68lv5Ys9yUf",
+        "HOST": "postgres-admin-ahamedmansoor169.i.aivencloud.com",
+        "PORT": "18459",
     }
 }
 
